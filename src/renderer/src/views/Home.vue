@@ -8,6 +8,6 @@ import AnchorBar from '../components/anchorBar.vue'
 </template>
 <style lang="scss">
 .color {
-  background-color: whitesmoke;
+  background-color: antiquewhite;
 }
 </style>
