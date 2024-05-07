@@ -1,3 +1,3 @@
 <template>
-    <div>this is genrate report page</div>
+  <el-button type="primary">开始生成报告</el-button>
 </template>
