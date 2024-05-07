@@ -12,8 +12,7 @@
   </div>
 </template>
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref } from 'vue'
 const selectedMethod = ref('1')
 </script>
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>
