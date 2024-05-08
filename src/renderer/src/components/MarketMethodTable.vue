@@ -18,7 +18,7 @@
           <el-form-item label="案例名称:" prop="caseName">
             <el-col :span="16"><el-input v-model="item.data.caseName"></el-input></el-col>
           </el-form-item>
-          <el-form-item label="交易价格:" prop="caseName">
+          <el-form-item label="交易价格:" prop="transactionPrice">
             <el-col :span="16"><el-input v-model="item.data.transactionPrice"></el-input></el-col>
           </el-form-item>
           <el-form-item label="交易情况:" prop="caseName">
@@ -222,6 +222,7 @@
         </el-form>
       </el-tab-pane>
     </el-tabs>
+    <el-button type="primary">保存所有数据</el-button>
   </div>
 </template>
 <script setup lang="ts">
@@ -229,11 +230,11 @@ import { ref, reactive } from 'vue'
 import type { TabPaneName } from 'element-plus'
 
 let tabIndex = 3
-const editableTabsValue = ref('3')
+const editableTabsValue = ref('1')
 
 const formData = reactive({
   caseName: '',
-  transactionPrice: '待估',
+  transactionPrice: '',
   transactionCondition: '正常',
   marketCondition: '100',
   location: '100',
@@ -258,26 +259,32 @@ const formData = reactive({
 
 let editableTabs = reactive([
   {
-    title: '案例一',
+    title: '案例1',
     name: '1',
-    data: formData
+    data: reactive({
+      ...formData
+    })
   },
   {
-    title: '案例二',
+    title: '案例2',
     name: '2',
-    data: formData
+    data: reactive({
+      ...formData
+    })
   },
   {
-    title: '案例三',
+    title: '案例3',
     name: '3',
-    data: formData
+    data: reactive({
+      ...formData
+    })
   }
 ])
 const handleTabsEdit = (targetName: TabPaneName | undefined, action: 'remove' | 'add') => {
   if (action === 'add') {
     const newTabName = `${++tabIndex}`
     editableTabs.push({
-      title: 'New Tab',
+      title: '案例' + tabIndex,
       name: newTabName,
       data: formData
     })

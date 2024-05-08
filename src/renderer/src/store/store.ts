@@ -10,7 +10,7 @@ export const useReportDataStore = defineStore('reportData', {
       valueTime: '',
       purposeOfValuation: '',
       reportDate: '',
-      reportMethod: ''
+      selectedMethod: '市场法'
     }
   }),
   getters: {
