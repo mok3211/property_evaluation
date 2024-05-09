@@ -11,7 +11,9 @@ export const useReportDataStore = defineStore('reportData', {
       purposeOfValuation: '',
       reportDate: '',
       selectedMethod: '市场法',
-      marketMethodData: {}
+      marketMethodData: {},
+      costMethodData: {},
+      inComeMethodData: {}
     }
   }),
   getters: {
