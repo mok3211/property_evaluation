@@ -21,159 +21,174 @@
           <el-form-item label="交易价格:" prop="transactionPrice">
             <el-col :span="16"><el-input v-model="item.data.transactionPrice"></el-input></el-col>
           </el-form-item>
-          <el-form-item label="交易情况:" prop="caseName">
+          <el-form-item label="交易情况:">
             <el-row :gutter="20">
               <el-col :span="10"
-                ><el-input v-model="item.data.transactionPrice" placeholder="信息"></el-input
+                ><el-input
+                  v-model="item.data.transactionConditionInfo"
+                  placeholder="信息"
+                ></el-input
               ></el-col>
               <el-col :span="10"
-                ><el-input v-model="item.data.transactionPrice" placeholder="因素"></el-input
+                ><el-input
+                  v-model="item.data.transactionConditionRefactor"
+                  placeholder="因素"
+                ></el-input
               ></el-col>
             </el-row>
           </el-form-item>
-          <el-form-item label="市场情况:" prop="caseName">
+          <el-form-item label="市场情况:">
             <el-row :gutter="20">
               <el-col :span="10"
-                ><el-input v-model="item.data.transactionPrice" placeholder="信息"></el-input
+                ><el-input v-model="item.data.marketConditionInfo" placeholder="信息"></el-input
               ></el-col>
               <el-col :span="10"
-                ><el-input v-model="item.data.transactionPrice" placeholder="因素"></el-input
+                ><el-input v-model="item.data.marketConditionRefactor" placeholder="因素"></el-input
               ></el-col>
             </el-row>
           </el-form-item>
           <el-divider content-position="center">区位状况</el-divider>
-          <el-form-item label="位置:" prop="caseName">
+          <el-form-item label="位置:">
             <el-row :gutter="20">
               <el-col :span="10" :offset="2"
-                ><el-input v-model="item.data.transactionPrice" placeholder="信息"></el-input
+                ><el-input v-model="item.data.locationInfo" placeholder="信息"></el-input
               ></el-col>
               <el-col :span="10"
-                ><el-input v-model="item.data.transactionPrice" placeholder="因素"></el-input
+                ><el-input v-model="item.data.locationRefactor" placeholder="因素"></el-input
               ></el-col>
             </el-row>
           </el-form-item>
-          <el-form-item label="楼层:" prop="caseName">
+          <el-form-item label="楼层:">
             <el-row :gutter="20">
               <el-col :span="10" :offset="2"
-                ><el-input v-model="item.data.transactionPrice" placeholder="信息"></el-input
+                ><el-input v-model="item.data.floorInfo" placeholder="信息"></el-input
               ></el-col>
               <el-col :span="10"
-                ><el-input v-model="item.data.transactionPrice" placeholder="因素"></el-input
+                ><el-input v-model="item.data.floorRefactor" placeholder="因素"></el-input
               ></el-col>
             </el-row>
           </el-form-item>
-          <el-form-item label="朝向:" prop="caseName">
+          <el-form-item label="朝向:">
             <el-row :gutter="20">
               <el-col :span="10" :offset="2"
-                ><el-input v-model="item.data.transactionPrice" placeholder="信息"></el-input
+                ><el-input v-model="item.data.directionInfo" placeholder="信息"></el-input
               ></el-col>
               <el-col :span="10"
-                ><el-input v-model="item.data.transactionPrice" placeholder="因素"></el-input
-              ></el-col>
-            </el-row>
-          </el-form-item>
-          <el-form-item label="交通状况:" prop="caseName">
-            <el-row :gutter="20">
-              <el-col :span="10"
-                ><el-input v-model="item.data.transactionPrice" placeholder="信息"></el-input
-              ></el-col>
-              <el-col :span="10"
-                ><el-input v-model="item.data.transactionPrice" placeholder="因素"></el-input
+                ><el-input v-model="item.data.directionRefactor" placeholder="因素"></el-input
               ></el-col>
             </el-row>
           </el-form-item>
-          <el-form-item label="外部配套:" prop="caseName">
+          <el-form-item label="交通状况:">
             <el-row :gutter="20">
               <el-col :span="10"
-                ><el-input v-model="item.data.transactionPrice" placeholder="信息"></el-input
+                ><el-input v-model="item.data.trafficConditionInfo" placeholder="信息"></el-input
               ></el-col>
               <el-col :span="10"
-                ><el-input v-model="item.data.transactionPrice" placeholder="因素"></el-input
+                ><el-input v-model="item.data.externalSupportRefactor" placeholder="因素"></el-input
               ></el-col>
             </el-row>
           </el-form-item>
-          <el-form-item label="环境条件:" prop="caseName">
+          <el-form-item label="外部配套:">
             <el-row :gutter="20">
               <el-col :span="10"
-                ><el-input v-model="item.data.transactionPrice" placeholder="信息"></el-input
+                ><el-input v-model="item.data.externalSupportInfo" placeholder="信息"></el-input
               ></el-col>
               <el-col :span="10"
-                ><el-input v-model="item.data.transactionPrice" placeholder="因素"></el-input
+                ><el-input v-model="item.data.externalSupportRefactor" placeholder="因素"></el-input
+              ></el-col>
+            </el-row>
+          </el-form-item>
+          <el-form-item label="环境条件:">
+            <el-row :gutter="20">
+              <el-col :span="10"
+                ><el-input
+                  v-model="item.data.environmentConditionInfo"
+                  placeholder="信息"
+                ></el-input
+              ></el-col>
+              <el-col :span="10"
+                ><el-input
+                  v-model="item.data.environmentConditionRefactor"
+                  placeholder="因素"
+                ></el-input
               ></el-col>
             </el-row>
           </el-form-item>
           <el-divider content-position="center">实物状况</el-divider>
-          <el-form-item label="外观:" prop="caseName">
+          <el-form-item label="外观:">
             <el-row :gutter="20">
               <el-col :span="10" :offset="2"
-                ><el-input v-model="item.data.transactionPrice" placeholder="信息"></el-input
+                ><el-input v-model="item.data.appearanceInfo" placeholder="信息"></el-input
               ></el-col>
               <el-col :span="10"
-                ><el-input v-model="item.data.transactionPrice" placeholder="因素"></el-input
+                ><el-input v-model="item.data.appearanceRefactor" placeholder="因素"></el-input
               ></el-col>
             </el-row>
           </el-form-item>
-          <el-form-item label="建筑面积:" prop="caseName">
+          <el-form-item label="建筑面积:">
             <el-row :gutter="20">
               <el-col :span="10"
-                ><el-input v-model="item.data.transactionPrice" placeholder="信息"></el-input
+                ><el-input v-model="item.data.floorAreaInfo" placeholder="信息"></el-input
               ></el-col>
               <el-col :span="10"
-                ><el-input v-model="item.data.transactionPrice" placeholder="因素"></el-input
+                ><el-input v-model="item.data.floorAreaRefactor" placeholder="因素"></el-input
               ></el-col>
             </el-row>
           </el-form-item>
-          <el-form-item label="建筑结构:" prop="caseName">
+          <el-form-item label="建筑结构:">
             <el-row :gutter="20">
               <el-col :span="10"
-                ><el-input v-model="item.data.transactionPrice" placeholder="信息"></el-input
+                ><el-input v-model="item.data.floorStructInfo" placeholder="信息"></el-input
               ></el-col>
               <el-col :span="10"
-                ><el-input v-model="item.data.transactionPrice" placeholder="因素"></el-input
+                ><el-input v-model="item.data.floorStructRefactor" placeholder="因素"></el-input
               ></el-col>
             </el-row>
           </el-form-item>
-          <el-form-item label="设备设施:" prop="caseName">
+          <el-form-item label="设备设施:">
             <el-row :gutter="20">
               <el-col :span="10"
-                ><el-input v-model="item.data.transactionPrice" placeholder="信息"></el-input
+                ><el-input v-model="item.data.equipmentInfo" placeholder="信息"></el-input
               ></el-col>
               <el-col :span="10"
-                ><el-input v-model="item.data.transactionPrice" placeholder="因素"></el-input
+                ><el-input v-model="item.data.equipmentRefactor" placeholder="因素"></el-input
               ></el-col>
             </el-row>
           </el-form-item>
-          <el-form-item label="装饰装修:" prop="caseName">
+          <el-form-item label="装饰装修:">
             <el-row :gutter="20">
               <el-col :span="10"
-                ><el-input v-model="item.data.transactionPrice" placeholder="信息"></el-input
+                ><el-input v-model="item.data.fittingOutInfo" placeholder="信息"></el-input
               ></el-col>
               <el-col :span="10"
-                ><el-input v-model="item.data.transactionPrice" placeholder="因素"></el-input
+                ><el-input v-model="item.data.fittingOutRefactor" placeholder="因素"></el-input
               ></el-col>
             </el-row>
           </el-form-item>
-          <el-form-item label="空间布局:" prop="caseName">
+          <el-form-item label="空间布局:">
             <el-row :gutter="20">
               <el-col :span="10"
-                ><el-input v-model="item.data.transactionPrice" placeholder="信息"></el-input
+                ><el-input v-model="item.data.layoutInfo" placeholder="信息"></el-input
               ></el-col>
               <el-col :span="10"
-                ><el-input v-model="item.data.transactionPrice" placeholder="因素"></el-input
+                ><el-input v-model="item.data.layoutRefactor" placeholder="因素"></el-input
               ></el-col>
             </el-row>
           </el-form-item>
-          <el-form-item label="建筑功能:" prop="caseName">
+          <el-form-item label="建筑功能:">
             <el-row :gutter="20">
               <el-col :span="10"
-                ><el-input v-model="item.data.transactionPrice" placeholder="信息"></el-input
+                ><el-input v-model="item.data.buildingFunctionInfo" placeholder="信息"></el-input
               ></el-col>
               <el-col :span="10"
-                ><el-input v-model="item.data.transactionPrice" placeholder="因素"></el-input
+                ><el-input
+                  v-model="item.data.buildingFunctionRefactor"
+                  placeholder="因素"
+                ></el-input
               ></el-col>
             </el-row>
           </el-form-item>
-          <el-form-item label="新旧程度:" prop="caseName">
+          <el-form-item label="新旧程度:">
             <el-row :gutter="20">
               <el-col :span="10"
                 ><el-input v-model="item.data.transactionPrice" placeholder="信息"></el-input
@@ -184,50 +199,54 @@
             </el-row>
           </el-form-item>
           <el-divider content-position="center">权益状况</el-divider>
-          <el-form-item label="用途:" prop="caseName">
+          <el-form-item label="用途:">
             <el-row :gutter="20">
               <el-col :span="10" :offset="2"
-                ><el-input v-model="item.data.transactionPrice" placeholder="信息"></el-input
+                ><el-input v-model="item.data.purposeInfo" placeholder="信息"></el-input
               ></el-col>
               <el-col :span="10"
-                ><el-input v-model="item.data.transactionPrice" placeholder="因素"></el-input
+                ><el-input v-model="item.data.purposeRefactor" placeholder="因素"></el-input
               ></el-col>
             </el-row>
           </el-form-item>
-          <el-form-item label="房产类型:" prop="caseName">
+          <el-form-item label="房产类型:">
             <el-row :gutter="20">
               <el-col :span="10"
-                ><el-input v-model="item.data.transactionPrice" placeholder="信息"></el-input
+                ><el-input v-model="item.data.buildingTypeInfo" placeholder="信息"></el-input
               ></el-col>
               <el-col :span="10"
-                ><el-input v-model="item.data.transactionPrice" placeholder="因素"></el-input
+                ><el-input v-model="item.data.buildingTypeRefactor" placeholder="因素"></el-input
               ></el-col>
             </el-row>
           </el-form-item>
           <el-divider content-position="center">修正参数</el-divider>
-          <el-form-item label="修正系数:" prop="caseName">
+          <el-form-item label="修正系数:">
             <el-row :gutter="20">
               <el-col :span="20"
-                ><el-input v-model="item.data.transactionPrice" placeholder="信息"></el-input
+                ><el-input v-model="item.data.modifiedCoefficient" placeholder="因素"></el-input
               ></el-col>
             </el-row>
           </el-form-item>
           <el-form-item label="修正后的房地产价格:" prop="caseName">
             <el-row :gutter="20">
               <el-col :span="20"
-                ><el-input v-model="item.data.transactionPrice" placeholder="信息"></el-input
+                ><el-input v-model="item.data.adjustedPropertyPrice" placeholder="价格"></el-input
               ></el-col>
             </el-row>
           </el-form-item>
         </el-form>
       </el-tab-pane>
     </el-tabs>
-    <el-button type="primary">保存所有数据</el-button>
+    <el-button type="primary" @click="saveAllData">保存所有数据</el-button>
   </div>
 </template>
 <script setup lang="ts">
 import { ref, reactive } from 'vue'
-import type { TabPaneName } from 'element-plus'
+import { TabPaneName } from 'element-plus'
+import { ElMessage } from 'element-plus'
+import { useReportDataStore } from '../store/store'
+const useStore = useReportDataStore()
+const storeData = useStore.getReportData
 
 let tabIndex = 3
 const editableTabsValue = ref('1')
@@ -235,26 +254,45 @@ const editableTabsValue = ref('1')
 const formData = reactive({
   caseName: '',
   transactionPrice: '',
-  transactionCondition: '正常',
-  marketCondition: '100',
-  location: '100',
+  transactionConditionInfo: '正常',
+  transactionConditionRefactor: '100',
+  marketConditionInfo: '',
+  marketConditionRefactor: '100',
+  locationInfo: '',
+  locationRefactor: '100',
+  floorInfo: '',
+  floorRefactor: '100',
+  directionInfo: '',
+  directionRefactor: '100',
+  trafficConditionInfo: '较优',
+  trafficConditionRefactor: '100',
   trafficCondition: '较优',
-  externalSupport: '较齐全',
-  regionalCondition: '100',
-  facilities: '100',
-  environmentCondition: '较好',
-  floor: '100',
-  orientation: '南北',
-  buildingArea: '100',
-  buildingStructure: '100',
-  equipment: '较齐全',
-  decoration: '100',
-  spaceLayout: '较好',
-  buildingFunction: '住宅',
-  appearance: '较好',
-  newOldDegree: '100',
-  purpose: '住宅',
-  propertyType: '商品房'
+  externalSupportRefactor: '100',
+  externalSupportInfo: '较齐全',
+  environmentConditionInfo: '较好',
+  environmentConditionRefactor: '100',
+  appearanceInfo: '较好',
+  appearanceRefactor: '100',
+  floorAreaInfo: '',
+  floorAreaRefactor: '100',
+  floorStructInfo: '',
+  floorStructRefactor: '100',
+  equipmentInfo: '较齐全',
+  equipmentRefactor: '100',
+  fittingOutInfo: '',
+  fittingOutRefactor: '100',
+  layoutInfo: '较好',
+  layoutRefactor: '100',
+  buildingFunctionInfo: '住宅',
+  buildingFunctionRefactor: '100',
+  ageInfo: '',
+  ageRefactor: '100',
+  purposeInfo: '住宅',
+  purposeRefactor: '100',
+  buildingTypeInfo: '住宅',
+  buildingTypeRefactor: '100',
+  modifiedCoefficient: '',
+  adjustedPropertyPrice: ''
 })
 
 let editableTabs = reactive([
@@ -305,6 +343,16 @@ const handleTabsEdit = (targetName: TabPaneName | undefined, action: 'remove' | 
     editableTabsValue.value = activeName
     editableTabs = tabs.filter((tab) => tab.name !== targetName)
   }
+}
+
+function saveAllData() {
+  storeData.marketMethodData = JSON.parse(JSON.stringify(editableTabs))
+  useStore.updateReportData(storeData)
+  ElMessage({
+    message: '保存数据成功',
+    type: 'success',
+    plain: true
+  })
 }
 </script>
 <style lang="scss" scoped>

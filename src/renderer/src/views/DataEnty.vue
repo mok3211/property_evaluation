@@ -36,6 +36,7 @@
 <script setup lang="ts">
 import { reactive } from 'vue'
 import { useReportDataStore } from '../store/store'
+import { ElMessage } from 'element-plus'
 const useStore = useReportDataStore()
 let dataEnty = reactive({
   reportNumber: '',
@@ -50,6 +51,11 @@ dataEnty = useStore.getReportData
 function storeDataEnty() {
   useStore.updateReportData(dataEnty)
 }
+ElMessage({
+  message: '保存数据成功',
+  type: 'success',
+  plain: true
+})
 </script>
 <style lang="scss" scoped>
 .data-enty {

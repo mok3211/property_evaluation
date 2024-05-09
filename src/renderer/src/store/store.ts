@@ -10,7 +10,8 @@ export const useReportDataStore = defineStore('reportData', {
       valueTime: '',
       purposeOfValuation: '',
       reportDate: '',
-      selectedMethod: '市场法'
+      selectedMethod: '市场法',
+      marketMethodData: {}
     }
   }),
   getters: {
@@ -19,7 +20,7 @@ export const useReportDataStore = defineStore('reportData', {
   actions: {
     updateReportData(newData) {
       this.reportData = { ...newData }
-      console.log("new data is ")
+      console.log('new data is ')
       console.log(this.reportData)
     }
   }
