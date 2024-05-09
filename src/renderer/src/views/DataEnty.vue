@@ -28,9 +28,9 @@
       <span>估价报告出具日期：</span>
       <el-input v-model="dataEnty.reportDate" style="width: 240px" />
     </div>
-    <div class="mb-4">
-      <el-button type="primary" @click="storeDataEnty">暂存</el-button>
-    </div>
+  </div>
+  <div class="mb-4; style='margin-top:20px'">
+    <el-button type="primary" @click="storeDataEnty">暂存</el-button>
   </div>
 </template>
 <script setup lang="ts">
@@ -50,15 +50,16 @@ let dataEnty = reactive({
 dataEnty = useStore.getReportData
 function storeDataEnty() {
   useStore.updateReportData(dataEnty)
+  ElMessage({
+    message: '保存数据成功',
+    type: 'success',
+    plain: true
+  })
 }
-ElMessage({
-  message: '保存数据成功',
-  type: 'success',
-  plain: true
-})
 </script>
 <style lang="scss" scoped>
 .data-enty {
   text-align: left;
+  font-size: 20px;
 }
 </style>
