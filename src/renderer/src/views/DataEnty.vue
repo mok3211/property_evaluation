@@ -29,8 +29,8 @@
       <el-input v-model="dataEnty.reportDate" style="width: 240px" />
     </div>
   </div>
-  <div class="mb-4; style='margin-top:20px'">
-    <el-button type="primary" @click="storeDataEnty">暂存</el-button>
+  <div class="mb-4 btn-confirm">
+    <el-button type="primary" @click="storeDataEnty">保存</el-button>
   </div>
 </template>
 <script setup lang="ts">
@@ -61,5 +61,8 @@ function storeDataEnty() {
 .data-enty {
   text-align: left;
   font-size: 20px;
+  .btn-confirm {
+    margin-top: 50px;
+  }
 }
 </style>

@@ -6,7 +6,7 @@
       <el-radio value="成本法" size="large" border>成本法</el-radio>
       <el-radio value="收益法" size="large" border>收益法</el-radio>
     </el-radio-group>
-    <div class="mb-4 margin-top:20px">
+    <div class="mb-4 btn-confirm">
       <el-button type="primary" @click="saveMethodChoice">保存</el-button>
     </div>
   </div>
@@ -32,5 +32,8 @@ function saveMethodChoice() {
 <style lang="scss" scoped>
 .methods-selection {
   font-size: 20px;
+  .btn-confirm {
+    margin-top: 50px;
+  }
 }
 </style>

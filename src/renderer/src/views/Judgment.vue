@@ -49,13 +49,15 @@
     </div>
     <el-divider></el-divider>
     <el-row :gutter="20"
-      ><el-col :span="3"><el-input placeholder="最终确认价格"></el-input></el-col>
-      <el-col :span="4">市场背景描述及分析:</el-col>
+      ><el-col :span="5"><el-input placeholder="最终确认价格"></el-input></el-col>
+      <el-col :span="8">市场背景描述及分析:</el-col>
       <el-col :span="3"
         ><el-input v-model="judgmentData.city" placeholder="估价对象"></el-input> </el-col
     ></el-row>
 
-    <el-button type="primary" @click="confirmData">确认数据</el-button>
+    <div class="button-confirm">
+      <el-button type="primary" @click="confirmData">确认数据</el-button>
+    </div>
   </div>
 </template>
 <script setup lang="ts">
@@ -116,5 +118,8 @@ function confirmData() {
 <style lang="scss" scoped>
 .judgment-main {
   font-size: 20px;
+}
+.button-confirm {
+  margin-top: 50px;
 }
 </style>

@@ -130,7 +130,9 @@
         ></el-col>
       </el-row>
     </el-form>
-    <el-button type="primary" @click="saveIncomeMethodData">保存</el-button>
+    <div class="btn-confirm">
+      <el-button type="primary" @click="saveIncomeMethodData">保存</el-button>
+    </div>
   </div>
 </template>
 <script setup lang="ts">
@@ -176,4 +178,8 @@ function saveIncomeMethodData() {
   })
 }
 </script>
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.btn-confirm {
+  margin-top: 50px;
+}
+</style>
