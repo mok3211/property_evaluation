@@ -6,7 +6,7 @@ import Judgement from '../views/Judgment.vue'
 import SettingsAndComputation from '../views/SettingsAndComputation.vue'
 import SubjectInfomation from '../views/SubjectInfomation.vue'
 import GenrateReport from '../views/GenrateReport.vue'
-const tabPosition = ref('left')
+const tabPosition = ref('top')
 </script>
 <template class="anchor-bar">
   <el-tabs :tab-position="tabPosition" class="demo-tabs">

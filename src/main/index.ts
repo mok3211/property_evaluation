@@ -1,4 +1,4 @@
-import { app, shell, BrowserWindow, ipcMain } from 'electron'
+import { app, shell, BrowserWindow, ipcMain, globalShortcut } from 'electron'
 import { join } from 'path'
 import { electronApp, optimizer, is } from '@electron-toolkit/utils'
 import icon from '../../resources/icon.png?asset'
@@ -19,6 +19,11 @@ function createWindow(): void {
     }
   })
   //mainWindow.webContents.openDevTools()
+  app.whenReady().then(()=>{
+      globalShortcut.register('Alt+CommandOrControl+I', () => {
+        mainWindow.webContents.openDevTools()
+      })
+  })
 
   mainWindow.on('ready-to-show', () => {
     mainWindow.show()
@@ -37,7 +42,6 @@ function createWindow(): void {
     mainWindow.loadFile(join(__dirname, '../renderer/index.html'))
   }
 }
-
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.

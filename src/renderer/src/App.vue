@@ -1,20 +1,24 @@
-<script setup lang="ts">
-//import Versions from './components/Versions.vue'
-
-//const ipcHandle = () => window.electron.ipcRenderer.send('ping')
-</script>
 <template>
   <div class="common-layout">
     <el-container>
       <el-header class="header"><div class="header-text">房地产评估报告生成器 V1.0</div></el-header>
       <el-main class="main">
-        <router-link to="/"></router-link>
+        <router-link :to='url'></router-link>
         <router-view></router-view>
       </el-main>
-      <!-- <el-footer><Versions></Versions></el-footer> -->
+      <el-footer><Versions/></el-footer>
     </el-container>
   </div>
 </template>
+<script setup lang="ts">
+import {ref} from 'vue';
+import { useRouter } from 'vue-router';
+import Versions from './components/Versions.vue'
+//在这里需要去判断是否有登录
+let url = ref("/")
+const router = useRouter()
+router.push("/")
+</script>
 <style lang="scss" scoped>
 .common-layout {
   text-align: center;
@@ -31,7 +35,7 @@
     font-size: 20px;
   }
   .el-main{
-    padding: 10px !important;
+    padding: 5px !important;
   }
   .main {
     width: 100%;
