@@ -1,35 +1,74 @@
 <template>
   <div class="data-enty container">
-    <div class="gap-4 mb-4">
-      <span>估价报号编号：</span>
-      <el-input v-model="dataEnty.reportNumber" style="width: 240px" />
+  <!-- 估价报号编号 -->
+    <div class="rowEl">
+      <div class="row-left">
+        <span>估价报号编号：</span>   
+      </div>
+      <div class="row-right">
+       <el-input v-model="dataEnty.reportNumber" style="width: 100%" />
+      </div>
     </div>
-    <div class="gap-4 mb-4">
-      <span>估价项目名称：</span>
-      <el-input v-model="dataEnty.reportProjectName" style="width: 240px" />
+  <!-- 估价项目名称 -->
+   <div class="rowEl">
+      <div class="row-left">
+        <span>估价项目名称：</span>   
+      </div>
+      <div class="row-right">
+       <el-input v-model="dataEnty.reportProjectName" style="width: 100%" />
+      </div>
     </div>
-    <div class="gap-4 mb-4">
-      <span>估价委托人：</span>
-      <el-input v-model="dataEnty.appraisalClient" style="width: 240px" />
+
+  <!-- 估价委托人 -->
+   <div class="rowEl">
+      <div class="row-left">
+        <span>估价委托人：</span>   
+      </div>
+      <div class="row-right">
+       <el-input v-model="dataEnty.appraisalClient" style="width: 100%" />
+      </div>
     </div>
-    <div class="gap-4 mb-4">
-      <span>注册房地产估价师：</span>
-      <el-input v-model="dataEnty.registeredAppraisers" style="width: 240px" />
+   
+   <!-- 注册房地产估价师 -->
+   <div class="rowEl">
+      <div class="row-left">
+        <span>注册房地产估价师：</span>   
+      </div>
+      <div class="row-right">
+       <el-input v-model="dataEnty.registeredAppraisers" style="width: 100%" />
+      </div>
     </div>
-    <div class="gap-4 mb-4">
-      <span>估价时间：</span>
-      <el-input v-model="dataEnty.valueTime" style="width: 240px" />
+   
+    <!-- 估价时间： -->
+   <div class="rowEl">
+      <div class="row-left">
+        <span>估价时间：</span>   
+      </div>
+      <div class="row-right">
+       <el-input v-model="dataEnty.valueTime" style="width: 100%" />
+      </div>
     </div>
-    <div class="gap-4 mb-4">
-      <span>估价目的：</span>
-      <el-input v-model="dataEnty.purposeOfValuation" style="width: 240px" />
+  
+   <!-- 估价目的 -->
+   <div class="rowEl">
+      <div class="row-left">
+        <span>估价目的：</span>   
+      </div>
+      <div class="row-right">
+       <el-input v-model="dataEnty.purposeOfValuation" style="width: 100%" />
+      </div>
     </div>
-    <div class="gap-4 mb-4">
-      <span>估价报告出具日期：</span>
-      <el-input v-model="dataEnty.reportDate" style="width: 240px" />
+    <!-- 估价报告出具日期 -->
+   <div class="rowEl">
+      <div class="row-left">
+        <span>估价报告出具日期：</span>   
+      </div>
+      <div class="row-right">
+       <el-input v-model="dataEnty.reportDate" style="width: 100%" />
+      </div>
     </div>
   </div>
-  <div class="mb-4 btn-confirm">
+  <div class="btn-confirm">
     <el-button type="primary" @click="storeDataEnty">保存</el-button>
   </div>
 </template>
@@ -64,5 +103,19 @@ function storeDataEnty() {
   .btn-confirm {
     margin-top: 50px;
   }
+  .rowEl {
+    width: 500px;
+    line-height:46px;
+     display:flex;
+     .row-left{
+      width:200px;
+      text-align:right;
+     }
+     .row-right{
+      width:300px;
+     }
+  }
+  
 }
+
 </style>
