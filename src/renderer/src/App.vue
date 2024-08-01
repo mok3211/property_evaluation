@@ -15,9 +15,9 @@ import {ref} from 'vue';
 import { useRouter } from 'vue-router';
 import Versions from './components/Versions.vue'
 //在这里需要去判断是否有登录
-let url = ref("/")
+let url = ref("/Login")
 const router = useRouter()
-router.push("/")
+router.push("/Login")
 </script>
 <style lang="scss" scoped>
 .common-layout {
