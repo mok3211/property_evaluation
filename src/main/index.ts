@@ -19,10 +19,10 @@ function createWindow(): void {
     }
   })
   //mainWindow.webContents.openDevTools()
-  app.whenReady().then(()=>{
-      globalShortcut.register('Alt+CommandOrControl+I', () => {
-        mainWindow.webContents.openDevTools()
-      })
+  app.whenReady().then(() => {
+    globalShortcut.register('Alt+CommandOrControl+I', () => {
+      mainWindow.webContents.openDevTools()
+    })
   })
 
   mainWindow.on('ready-to-show', () => {
