@@ -8,6 +8,9 @@ import AnchorBar from '../components/anchorBar.vue'
 </template>
 <style lang="scss">
 .color {
+  height: 100%;
+  padding: 20px;
+  border-radius: 5px;
   background-color: antiquewhite;
 }
 </style>
