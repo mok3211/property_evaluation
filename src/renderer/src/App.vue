@@ -83,10 +83,11 @@ function setting() {
     overflow: hidden;
     padding-top: 20px;
     padding-bottom: 20px;
+    margin-left: 10px;
     .aside-main {
       border-radius: 10px;
       height: 100%;
-      background: wheat;
+      background: whitesmoke;
     }
   }
 }
