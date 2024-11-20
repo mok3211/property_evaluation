@@ -1,11 +1,18 @@
-<script setup lang="ts">
-import AnchorBar from '../components/anchorBar.vue'
-</script>
 <template>
   <div class="color">
-    <AnchorBar></AnchorBar>
+    <div v-if="isLogin">
+      <AnchorBar/>
+    </div>
+    <div v-else>
+      欢迎使用本系统！
+    </div>
   </div>
 </template>
+<script setup lang="ts">
+import AnchorBar from '../components/anchorBar.vue'
+const isLogin = true;
+</script>
+
 <style lang="scss">
 .color {
   height: 100%;
